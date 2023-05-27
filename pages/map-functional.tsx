@@ -2,7 +2,7 @@
 import { Loader } from '@googlemaps/js-api-loader';
 import { useEffect, useRef } from 'react'
 
-export default function GMapsLoader() {
+export default function GMapsFunctional() {
   const refMap = useRef(null)
   const refUserLocation = useRef(null)
 
@@ -16,9 +16,7 @@ export default function GMapsLoader() {
       if (refMap.current) {
         new google.maps.Map(refMap.current, {
           zoom: 1,
-          center: {
-            lat: -34.397, lng: 150.644
-          }
+          center: { lat: -34.397, lng: 150.644 }
           // mapTypeId: 'satellite'
         });
       }

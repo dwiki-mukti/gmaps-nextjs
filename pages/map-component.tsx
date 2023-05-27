@@ -3,7 +3,7 @@ import { Wrapper, Status } from '@googlemaps/react-wrapper'
 import React, { useEffect, useRef } from 'react'
 
 
-function MyMapComponent({
+function MapComponent({
   center,
   zoom,
 }: {
@@ -26,7 +26,7 @@ function MyMapComponent({
   )
 }
 
-export default function Home() {
+export default function GMapComponent() {
   return (
     <div>
       <Wrapper
@@ -34,7 +34,7 @@ export default function Home() {
         render={(status) => {
           if (status == Status.SUCCESS) {
             return (
-              <MyMapComponent
+              <MapComponent
                 center={{ lat: 10, lng: 10 }}
                 zoom={12}
               />
